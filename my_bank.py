@@ -18,13 +18,17 @@ while True:
     opcao = input(menu)
 
     if opcao == "d":
-        valueString = input("Digite o valor do seu depósito: R$ ")
-        valueFloat = float(valueString)
-        saldo += valueFloat
-        extrato += f"depósito: R$ {valueFloat}"
-        print(valueFloat)
+        depositoString = input("Digite o valor do seu depósito: R$ ")
+        depositoFloat = float(depositoString)
+        saldo += depositoFloat
+        extrato += f"depósito: R$ {depositoFloat:2f}\n"
+        print(depositoFloat)
 
     elif opcao == "s":
+        saqueString = input("Digite o valor do seu saque: R$ ")
+        saqueFloat = float(saqueString)
+        saldo -= saqueFloat
+        extrato += f"saque: R$ -{saqueFloat:2f}\n"
         print("saque")
 
     elif opcao == "e":
